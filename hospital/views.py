@@ -8,7 +8,9 @@ from django.contrib.auth.decorators import login_required,user_passes_test
 from datetime import datetime,timedelta,date
 from django.conf import settings
 from django.db.models import Q
-
+from django.contrib.auth import authenticate,login,logout
+from django.contrib import messages
+# Create your views here.
 # Create your views here.
 def home_view(request):
     if request.user.is_authenticated:
@@ -97,7 +99,18 @@ def patient_signup_view(request):
 
 
 
+def user_login(request):
+    if request.method == "POST":
+       username = request.POST.get('username')
+       password = request.POST.get('password')
+       user = authenticate(username=username,password=password)
+       if user is not None:
+            login(request,user)
+            return redirect('afterlogin')
+       messages.info(request,'User Login Failed Pleas Try Again ..')
 
+
+    return render(request,'hospital/patientlogin.html')
 
 
 #-----------for checking user is doctor , patient or admin(by sumit)

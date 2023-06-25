@@ -63,6 +63,11 @@
     <div class="container register-form">
       <div class="form">
         <div class="note">
+          {% if messages %}
+          {% for message in messages %}
+          <h1 class="login-title badge badge-light " style="color:red">{{message}}</h1>
+          {% endfor %}
+          {% endif %}
           <p>Patient Login Page</p>
         </div>
 
@@ -71,15 +76,14 @@
             <div class="col-md-6">
 
               <div class="form-group">
-                {% render_field form.username class="form-control" placeholder="Username" %}
+                <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" placeholder="Username" class="form-control" required="" id="id_username">
               </div>
 
             </div>
             <div class="col-md-6">
 
               <div class="form-group">
-                {% render_field form.password class="form-control" placeholder="Password" %}
-              </div>
+                <input type="password" name="password" autocomplete="current-password" placeholder="Password" class="form-control" required="" id="id_password">              </div>
 
             </div>
           </div>

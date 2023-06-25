@@ -28,6 +28,7 @@ urlpatterns = [
     path('adminlogin', LoginView.as_view(template_name='hospital/adminlogin.html')),
     path('doctorlogin', LoginView.as_view(template_name='hospital/doctorlogin.html')),
     path('patientlogin', LoginView.as_view(template_name='hospital/patientlogin.html')),
+    path('userlogin',views.user_login,name='userlogin'),
 
 
     path('afterlogin', views.afterlogin_view,name='afterlogin'),
