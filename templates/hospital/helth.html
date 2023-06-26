@@ -1,0 +1,1414 @@
+<style>
+    *{
+    font-family: 'Alata', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #EAEAEA;
+}
+.nav{
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #838383;
+    margin: 0;
+    padding: 35px;
+}
+.nav_list{
+    width: 90%;
+    display: flex;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+.list_item{
+    width: 10%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+}
+.list_item:first-child{
+    margin-left: 0;
+}
+.list_item:last-child{
+    margin-right: 0;
+}
+.list_item a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    border-bottom: 3px solid white;
+}
+a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+.fixed{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    margin: 0 50px 50px 50px;
+    padding: 0;
+    display: flex;
+    box-sizing: border-box;
+}
+.ig{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    bottom: 5px;
+    box-shadow: 0 4px 10px 1px rgba(0,0,0,0.3);
+}
+.ig:last-child{
+    margin-top: 20px;
+}
+.up{
+    position: absolute;
+    right: 100px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #fff;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    bottom: 5px;
+    box-shadow: 0 4px 10px 1px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+.container{
+    width: 60%;
+    margin: 150px auto;
+    padding: 0;
+}
+.img{
+    width: 100%;
+    border-radius: 30px;
+    margin-top: 50px;
+}
+.intro .img:first-child{
+    margin: 0;
+}
+.header{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 60px;
+}
+.content{
+    margin-top: 50px;
+    font-size: 40px;
+}
+.sub_header{
+    margin-top: 50px;
+    font-size: 50px;
+    width: 100%;
+    text-align: center;
+}
+.table{
+    width: 100%;
+    margin-top: 80px;
+    text-transform: uppercase;
+}
+.title{
+    width: 20%;
+    font-size: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid black;
+}
+.table_content{
+    font-size: 25px;
+    font-family: 'Alatsi', sans-serif;
+    text-align: center;
+    padding: 20px 5px;
+}
+.table_content:last-child{
+    font-size: 60px;
+    color: #192DE0;
+}
+.purchase_container{
+    width: 90%;
+    margin: 80px auto;
+    padding: 20px 30px;
+    background-color: #BDFFC4;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px 1px rgba(0,0,0,0.5);
+}
+.purchase{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.about .content a{
+    color: #0D6EFF;
+}
+.pros_cons_divide{
+    display: flex;
+}
+.half{
+    width: 40%;
+}
+.half:first-child{
+    margin-right: 10%;
+}
+.half:last-child{
+    margin-left: 10%;
+}
+.half:first-child .sub_header{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 30px 20px 30px;
+    background-color: #4BFF5D;
+    border: 4px solid black;
+    border-radius: 50px;
+}
+.half:last-child .sub_header{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 30px 20px 30px;
+    background-color: #FF7676;
+    border: 4px solid black;
+    border-radius: 50px;
+}
+.half .content{
+    font-size: 25px;
+}
+.divide{
+    width: 5px;
+    background-color: #D9D9D9;
+}
+.yt_player{
+    width: 100%;
+    height: 562.5px;
+    border-radius: 30px;
+    box-shadow: 0 4px 75px 30px rgba(255,62,62,.8);
+    margin-top: 50px;
+    overflow: hidden;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.review{
+    width: 70%;
+    margin-top: 50px;
+    background-color: #CEFFCA;
+    border: 5px solid black;
+    border-radius: 30px;
+    padding: 25px 50px 50px 40px;
+}
+.avatar{
+    width: 20%;
+    height: 0;
+    padding-bottom: 20%;
+    border-radius: 50%;
+    float: right;
+    background-color: #fff;
+    border: 5px solid black;
+    overflow: hidden;
+}
+.avatar .img{
+    width: 100%;
+    object-fit: cover;
+    margin: 0;
+}
+.reviews .review .content{
+    font-size: 30px;
+    width: 80%;
+    margin: 0;
+    clear: none;
+}
+.sign{
+    font-size: 40px;
+    float: right;
+}
+.review_l{
+    float: left;
+}
+.review_r{
+    float: right;
+}
+.reviews .content{
+    clear: both;
+}
+.bonus .purchase_container{
+    width: 64%;
+}
+.q{
+    width: 100%;
+    background-color: #CDD3EA;
+    border-radius: 30px;
+    padding: 20px;
+    border: 3px solid transparent;
+    margin-top: 50px;
+    transition: border .3s ease-in-out;
+}
+.q:hover{
+    border: 3px solid #3860ff;
+}
+.q .sub_header{
+    margin: 0 0 0 50px;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+}
+.q .content{
+    margin-top: 15px;
+    text-align: left;
+}
+.plus{
+    font-size: 60px;
+    margin: -60px 0 0 0;
+    position: absolute;
+    z-index: 5;
+    line-height: 100%;
+    transition: .6s ease-in-out;
+}
+.q_title{
+    display: flex;
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+}
+.q_title:hover{
+    color: #3860ff;
+}
+.faq_inner{
+    border-top: 2px solid rgb(130, 134, 255);
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+.panel{
+    display: none;
+}
+.panel:checked ~ .plus{
+    transform: rotate(315deg);
+}
+.panel:checked ~ .faq_inner{
+    height: auto;
+    opacity: 1;
+    padding: 14px;
+}
+.ref a{
+    color: #0D6EFF;
+    text-transform: none;
+}
+
+
+/*-------WIDTH 8192px---------*/
+
+@media (max-width: 8192px){
+    .list_item{
+        font-size: 50px;
+    }
+    .header{
+        font-size: 100px;
+    }
+    .sub_header{
+        font-size: 80px;
+    }
+    .content{
+        font-size: 60px;
+    }
+    .title{
+        font-size: 60px;
+    }
+    .table_content{
+        font-size: 40px;
+    }
+    .table_content:last-child{
+        font-size: 100px;
+    }
+    .intro .purchase_container{
+        width: 36%;
+    }
+    .purchase{
+        font-size: 70px;
+    }
+    .half:first-child .sub_header{
+        width: 10%;
+        font-size: 60px;
+    }
+    .half:last-child .sub_header{
+        width: 10%;
+        font-size: 60px;
+    }
+    .half .content{
+        font-size: 40px;
+    }
+    .divide{
+        width: 20px;
+    }
+    .yt_player{
+        height: 2700px;
+    }
+    .reviews .review .content{
+        font-size: 80px;
+    }
+    .sign{
+        font-size: 100px;
+    }
+    .bonus .purchase_container{
+        width: 25%;
+    }
+    .fixed{
+        margin: 0 0 100px 0;
+        width: 95%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .ig{
+        width: 100px;
+        height: 100px;
+        font-size: 70px;
+    }
+    .up{
+        width: 100px;
+        height: 100px;
+        font-size: 70px;
+    }
+}
+
+/*-------WIDTH 7680px---------*/
+
+@media (max-width: 7680px){
+    .intro .purchase_container{
+        width: 38%;
+    }
+    .yt_player{
+        height: 2600px;
+    }
+    .bonus .purchase_container{
+        width: 27%;
+    }
+}
+
+/*-------WIDTH 6480px---------*/
+
+@media (max-width: 6480px){
+    .intro .purchase_container{
+        width: 45%;
+    }
+    .yt_player{
+        height: 2200px;
+    }
+    .bonus .purchase_container{
+        width: 32%;
+    }
+}
+
+/*-------WIDTH 5120px---------*/
+
+@media (max-width: 5120px){
+    .intro .purchase_container{
+        width: 57%;
+    }
+    .yt_player{
+        height: 1800px;
+    }
+    .bonus .purchase_container{
+        width: 40%;
+    }
+}
+
+/*-------WIDTH 4500px---------*/
+
+@media (max-width: 4500px){
+    .intro .purchase_container{
+        width: 65%;
+    }
+    .half:first-child .sub_header{
+        width: 15%;
+        font-size: 60px;
+    }
+    .half:last-child .sub_header{
+        width: 15%;
+        font-size: 60px;
+    }
+    .yt_player{
+        height: 1500px;
+    }
+    .reviews .review .content{
+        font-size: 60px;
+    }
+    .sign{
+        font-size: 80px;
+    }
+    .bonus .purchase_container{
+        width: 45%;
+    }
+}
+
+/*-------WIDTH 4096px---------*/
+
+@media (max-width: 4096px){
+    .intro .purchase_container{
+        width: 71%;
+    }
+    .half:first-child .sub_header{
+        width: 15%;
+        font-size: 60px;
+    }
+    .half:last-child .sub_header{
+        width: 15%;
+        font-size: 60px;
+    }
+    .yt_player{
+        height: 1400px;
+    }
+    .bonus .purchase_container{
+        width: 50%;
+    }
+}
+
+/*-------WIDTH 3840px---------*/
+
+@media (max-width: 3840px){
+    .intro .purchase_container{
+        width: 76%;
+    }
+    .half:first-child .sub_header{
+        width: 15%;
+        font-size: 60px;
+    }
+    .half:last-child .sub_header{
+        width: 15%;
+        font-size: 60px;
+    }
+    .yt_player{
+        height: 1300px;
+    }
+    .reviews .review .content{
+        font-size: 60px;
+    }
+    .sign{
+        font-size: 80px;
+    }
+    .bonus .purchase_container{
+        width: 53%;
+    }
+    .fixed{
+        margin: 0 0 50px 0;
+        width: 95%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/*-------WIDTH 3200px---------*/
+
+@media (max-width: 3200px){
+    .intro .purchase_container{
+        width: 91%;
+    }
+    .half:first-child .sub_header{
+        width: 20%;
+        font-size: 60px;
+    }
+    .half:last-child .sub_header{
+        width: 20%;
+        font-size: 60px;
+    }
+    .yt_player{
+        height: 1000px;
+    }
+    .reviews .review .content{
+        font-size: 40px;
+    }
+    .sign{
+        font-size: 60px;
+    }
+    .bonus .purchase_container{
+        width: 63%;
+    }
+}
+
+/*-------WIDTH 2880px---------*/
+
+@media (max-width: 2880px){
+    .list_item{
+        font-size: 30px;
+    }
+    .title{
+        font-size: 50px;
+    }
+    .intro .purchase_container{
+        width: 75%;
+    }
+    .purchase{
+        font-size: 50px;
+    }
+    .half:first-child .sub_header{
+        width: 20%;
+        font-size: 60px;
+    }
+    .half:last-child .sub_header{
+        width: 20%;
+        font-size: 60px;
+    }
+    .yt_player{
+        height: 900px;
+    }
+    .reviews .review .content{
+        font-size: 40px;
+    }
+    .sign{
+        font-size: 60px;
+    }
+    .bonus .purchase_container{
+        width: 53%;
+    }
+}
+
+/*-------WIDTH 2576px---------*/
+
+@media (max-width: 2576px){
+    .header{
+        font-size: 80px;
+    }
+    .sub_header{
+        font-size: 60px;
+    }
+    .content{
+        font-size: 40px;
+    }
+    .intro .purchase_container{
+        width: 82%;
+    }
+    .purchase{
+        font-size: 50px;
+    }
+    .half:first-child .sub_header{
+        width: 25%;
+        font-size: 60px;
+    }
+    .half:last-child .sub_header{
+        width: 25%;
+        font-size: 60px;
+    }
+    .yt_player{
+        height: 800px;
+    }
+    .bonus .purchase_container{
+        width: 57%;
+    }
+}
+
+/*-------WIDTH 2256px---------*/
+
+@media (max-width: 2256px){
+    .title{
+        font-size: 40px;
+    }
+    .table_content{
+        font-size: 30px;
+    }
+    .table_content:last-child{
+        font-size: 80px;
+    }
+    .intro .purchase_container{
+        width: 93%;
+    }
+    .yt_player{
+        height: 600px;
+    }
+    .reviews .review .content{
+        font-size: 30px;
+    }
+    .sign{
+        font-size: 50px;
+    }
+    .bonus .purchase_container{
+        width: 66%;
+    }
+}
+
+/*-------WIDTH 2048px---------*/
+
+@media (max-width: 2048px){
+    .intro .purchase_container{
+        width: 64%;
+    }
+    .purchase{
+        font-size: 30px;
+    }
+    .half:first-child .sub_header{
+        width: 20%;
+        font-size: 40px;
+    }
+    .half:last-child .sub_header{
+        width: 20%;
+        font-size: 40px;
+    }
+    .half .content{
+        font-size: 30px;
+    }
+    .divide{
+        width: 15px;
+    }
+    .yt_player{
+        height: 680px;
+    }
+    .bonus .purchase_container{
+        width: 45%;
+    }
+    .fixed{
+        margin: 0 0 50px 0;
+        width: 95%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .ig{
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+    }
+    .up{
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+    }
+}
+
+/*-------WIDTH 1920px---------*/
+
+@media (max-width: 1920px){
+    .intro .purchase_container{
+        width: 68%;
+    }
+    .yt_player{
+        height: 600px;
+    }
+    .bonus .purchase_container{
+        width: 48%;
+    }
+}
+
+/*-------WIDTH 1440px---------*/
+
+@media (max-width: 1440px){
+    .list_item{
+        font-size: 20px;
+    }
+    .header{
+        font-size: 60px;
+    }
+    .sub_header{
+        font-size: 40px;
+    }
+    .content{
+        font-size: 30px;
+    }
+    .title{
+        font-size: 20px;
+    }
+    .table_content{
+        font-size: 20px;
+    }
+    .table_content:last-child{
+        font-size: 50px;
+    }
+    .intro .purchase_container{
+        width: 63%;
+    }
+    .purchase{
+        font-size: 20px;
+    }
+    .half:first-child .sub_header{
+        width: 20%;
+        font-size: 30px;
+    }
+    .half:last-child .sub_header{
+        width: 20%;
+        font-size: 30px;
+    }
+    .half .content{
+        font-size: 25px;
+    }
+    .divide{
+        width: 15px;
+    }
+    .yt_player{
+        height: 500px;
+    }
+    .reviews .review .content{
+        font-size: 20px;
+    }
+    .sign{
+        font-size: 40px;
+    }
+    .bonus .purchase_container{
+        width: 45%;
+    }
+}
+
+/*-------WIDTH 1366px---------*/
+
+@media (max-width: 1366px){
+    .intro .purchase_container{
+        width: 66%;
+    }
+    .yt_player{
+        height: 500px;
+    }
+    .bonus .purchase_container{
+        width: 48%;
+    }
+}
+
+/*-------WIDTH 1280px---------*/
+
+@media (max-width: 1280px){
+    .intro .purchase_container{
+        width: 71%;
+    }
+    .yt_player{
+        height: 450px;
+    }
+    .bonus .purchase_container{
+        width: 51%;
+    }
+}
+
+/*-------WIDTH 1080px---------*/
+
+@media (max-width: 1080px){
+    .list_item{
+        font-size: 15px;
+    }
+    .header{
+        font-size: 50px;
+    }
+    .sub_header{
+        font-size: 40px;
+    }
+    .content{
+        font-size: 30px;
+    }
+    .title{
+        font-size: 20px;
+    }
+    .table_content{
+        font-size: 20px;
+    }
+    .table_content:last-child{
+        font-size: 50px;
+    }
+    .intro .purchase_container{
+        width: 65%;
+    }
+    .purchase{
+        font-size: 15px;
+    }
+    .half:first-child .sub_header{
+        width: 20%;
+        font-size: 20px;
+    }
+    .half:last-child .sub_header{
+        width: 20%;
+        font-size: 20px;
+    }
+    .half .content{
+        font-size: 15px;
+    }
+    .divide{
+        width: 10px;
+    }
+    .yt_player{
+        height: 400px;
+    }
+    .reviews .review .content{
+        font-size: 15px;
+    }
+    .sign{
+        font-size: 35px;
+    }
+    .bonus .purchase_container{
+        width: 48%;
+    }
+}
+
+/*-------WIDTH 960px---------*/
+
+@media (max-width: 960px){
+    .intro .purchase_container{
+        width: 76%;
+    }
+    .bonus .purchase_container{
+        width: 56%;
+    }
+}
+
+/*-------WIDTH 720px---------*/
+
+@media (max-width: 720px){
+    .list_item{
+        font-size: 10px;
+    }
+    .header{
+        font-size: 40px;
+    }
+    .sub_header{
+        font-size: 30px;
+    }
+    .content{
+        font-size: 20px;
+    }
+    .title{
+        font-size: 15px;
+    }
+    .table_content{
+        font-size: 15px;
+    }
+    .table_content:last-child{
+        font-size: 40px;
+    }
+    .intro .purchase_container{
+        width: 98%;
+    }
+    .intro .purchase_container .purchase{
+        font-size: 15px;
+    }
+    .yt_player{
+        height: 200px;
+    }
+    .review{
+        width: 80%;
+    }
+    .container .reviews .review .content{
+        font-size: 15px;
+    }
+    .container .sign{
+        font-size: 35px;
+    }
+    .bonus .purchase_container{
+        width: 71%;
+    }
+    .fixed{
+        margin: 0 0 30px 0;
+        width: 95%;
+        left: 55%;
+        transform: translateX(-50%);
+    }
+    .ig{
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+    .up{
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+}
+
+/*-------WIDTH 640px---------*/
+
+@media (max-width: 640px){
+    .intro .purchase_container{
+        width: 78%;
+    }
+    #purchase640{
+        font-size: 10px;
+        padding: 10px 15px;
+    }
+    .half:first-child .sub_header{
+        width: 10%;
+        font-size: 17px;
+        padding: 5px 30px 5px 10px;
+    }
+    .half:last-child .sub_header{
+        width: 10%;
+        font-size: 17px;
+        padding: 5px 30px 5px 10px;
+    }
+    .half .content{
+        font-size: 15px;
+    }
+    .divide{
+        width: 10px;
+    }
+    .yt_player{
+        height: 200px;
+    }
+    .bonus .purchase_container{
+        width: 80%;
+    }
+}
+
+/*-------WIDTH 512px---------*/
+
+@media (max-width: 512px){
+    .nav{
+        padding: 15px;
+    }
+    .list_item{
+        font-size: 7px;
+    }
+    .container{
+        margin: 50px auto;
+    }
+    .header{
+        margin-top: 25px;
+        font-size: 30px;
+    }
+    .sub_header{
+        margin-top: 25px;
+        font-size: 20px;
+    }
+    .content{
+        margin-top: 25px;
+        font-size: 15px;
+    }
+    .title{
+        font-size: 10px;
+    }
+    .table_content{
+        font-size: 10px;
+    }
+    .table_content:last-child{
+        font-size: 30px;
+    }
+    .intro .purchase_container{
+        width: 88%;
+    }
+    .half .content{
+        font-size: 7px;
+    }
+    .divide{
+        width: 7px;
+    }
+    .yt_player{
+        height: 160px;
+    }
+    #review512{
+        padding: 15px 20px 20px 15px;
+        margin-top: 30px;
+    }
+    #review512 .content{
+        font-size: 10px;
+    }
+    #review512 .sign{
+        font-size: 20px;
+    }
+    .bonus .purchase_container{
+        width: 100%;
+    }
+    .fixed{
+        left: 60%;
+    }
+}
+
+/*-------WIDTH 480px---------*/
+
+@media (max-width: 480px){
+    .intro .purchase_container{
+        width: 94%;
+    }
+    .intro .purchase_container .purchase{
+        font-size: 10px;
+    }
+    #bonus .purchase_container{
+        width: 78%;
+    }
+    #bonus .purchase_container .purchase{
+        font-size: 10px;
+    }
+}
+
+/*-------WIDTH 432---------*/
+
+
+@media (max-width: 432px){
+    #purchase_container432{
+        width: 100%;
+    }
+    #purchase_container432 .purchase{
+        font-size: 10px;
+        padding: 9px;
+    }
+    .yt_player{
+        height: 130px;
+    }
+    #bonus .purchase_container{
+        width: 87%;
+    }
+    #bonus .purchase_container .purchase{
+        font-size: 10px;
+    }
+}
+
+/*-------WIDTH 320---------*/
+
+@media (max-width: 320px){
+    .nav{
+        padding: 10px;
+    }
+    .list_item{
+        font-size: 5px;
+    }
+    .header{
+        font-size: 20px;
+    }
+    .sub_header{
+        font-size: 15px;
+    }
+    .container{
+        font-size: 10px;
+    }
+    .title, .table_content{
+        font-size: 8px;
+    }
+    .table_content:last-child{
+        font-size: 20px;
+    }
+    #purchase_container432{
+        width: 93%;
+    }
+    #purchase_container432 .purchase{
+        font-size: 7px;
+        padding: 5px;
+    }
+    #bonus .purchase_container{
+        width: 66%;
+    }
+    #bonus .purchase_container .purchase{
+        font-size: 7px;
+        padding: 5px;
+    }
+}
+
+
+</style>
+
+
+<div class="container">
+    <!-- INTRO -->
+    <div class="intro">
+        <img src="imgs/@fat.burning.recipes-1.png" alt="instagram: @helth.medicare.hell" class="img">
+        <h1 class="header">
+            Are you tired of feeling <span style="color:#FF7373;">frustrated</span> and <span style="color:#FF7373;">discouraged</span> by the extra pounds on your body?
+        </h1>
+        <p class="content">
+            You're <span style="color:#6EDC2B;">NOT</span> alone. Losing weight can seem like an uphill battle, and it's no secret that carrying excess fat can lead to a host of health problems. But what if there was a natural way to burn fat and improve your overall health?
+        </p>
+        <h3 class="sub_header" id="intro">Introducing the <span style="border-bottom:3px solid #4ABEFF;">Fat Burning Kitchen.</span></h3>
+        <p class="content">
+            This comprehensive ebook is packed with information on natural remedies that can help you shed those unwanted pounds. Written by experts <span style="border-bottom:3px solid #3DBD3A;">Mike Geary</span> and <span style="border-bottom:3px solid #B5AF34;">Catherine Ebeling</span>, this review is your go-to source for tips on the best foods to eat to boost your body's fat-burning potential.
+        </p>
+        <p class="content">
+            With the Fat Burning Kitchen, you'll discover a 24-hour diet plan that can help kick-start your weight loss journey. Say goodbye to crash diets and restrictive meal plans - this program is designed to help you achieve sustainable, long-term results.
+        </p>
+        <p class="content">
+            Did you know that approximately one in three adults is obese, according to the Center for Disease Control? It's a startling statistic, but the good news is that there's no need to blame yourself. The Fat Burning Kitchen can help you take control of your health and feel more confident in your own skin.
+        </p>
+        <p class="content">
+            Don't let excess weight drain your energy and hold you back any longer. With the Fat Burning Kitchen, you can learn how to eat for optimal health and start feeling your best today. So why wait? Order your copy now and start your journey towards a healthier, happier you!
+        </p>
+        <table class="table">
+            <tr>
+                <th class="title">book title</th>
+                <th class="title">language</th>
+                <th class="title">author</th>
+                <th class="title">category</th>
+                <th class="title">price</th>
+            </tr>
+            <tr>
+                <td class="table_content">fat burning kitchen</td>
+                <td class="table_content">english</td>
+                <td class="table_content">catherine abaling & mike geary</td>
+                <td class="table_content">health and fitness</td>
+                <td class="table_content">$10</td>
+            </tr>
+        </table>
+        <div class="purchase_container" id="purchase_container432">
+            <a href="https://ssl.clickbank.net/order/orderform.html?time=1681457988&vvvv=6d696b65676561727931&vtid=novideoint3&cbskin=22995&cbfid=27321&cbf=S8LDUZDWVG&cbitems=98&vvar=cbitems%3D98%26vtid%3Dnovideoint3%26cbskin%3D22995%26cbfid%3D27321%26__user_id%3D59d60bcc445ba3f89f4f5c8277ba2df7%26__page_id%3D240%26__page_version%3D%26__hostname%3Dtruthaboutabs.com&corid=8940f12b-8f53-4585-aeec-a5490ae77523" target="_blank" class="purchase" id="purchase640">>>  already decided to give it a try? click here!</a>
+        </div>
+        <h1 class="header">
+            Are you tired of trying out different weight-loss programs that <span style="color:#D16666;">never</span> seem to work?
+        </h1>
+        <h3 class="sub_header"><span style="border-bottom:5px solid #CBCE2D;">Look no further!</span></h3>
+        <p class="content">
+            The Fat Burning Kitchen book is here to transform your body and help you achieve your desired weight. Here are some of the reasons why Fat Burning Kitchen is different from the rest.
+        </p>
+        <p class="content">
+            Firstly, the program is designed to get rid of obesity quickly in just 23 days! Yes, you heard that right - you can transform your body in just 23 days! Secondly, the book contains a comprehensive list of healthy and unhealthy foods that make it easy to understand what to eat and what to avoid.
+        </p>
+        <p class="content">
+            Moreover, you can get the Fat Burning Kitchen book quickly through the official website, and if you're not satisfied, you can get your money back. Plus, the book's reviews reveal the real truth about the foods that claim to be beneficial for you, helping you make informed decisions about your diet.
+        </p>
+        <p class="content">
+            The Fat Burning Kitchen book is written by two health enthusiasts, Catherine Ebeling and Mike Geary, who have compiled 23 chapters about all aspects of dieting plans and foods. They have listed harmful foods and demonstrate which food products are healthy for you.
+        </p>
+        <p class="content">
+            Mike Geary believes in eating less rather than more but beneficial foods, such as full-fat foods like coconut milk or oil, butter, nuts, meat, avocado, and milk. Truthaboutabs.com is also authorized by Mike Geary, and he has published many fitness articles on fitness websites.
+        </p>
+        <p class="content">
+            The Fat Burning Kitchen book is not only unique but also a natural way to reduce fat without causing harm to your body. You don't have to starve or exercise extensively to see results. By following this program, you can repair your digestive system, increase your energy levels, and keep your body calm and healthy.
+            If you're looking for a stress-free way to lose weight and improve your overall health, Fat Burning Kitchen is the answer. Don't waste your time on ineffective weight-loss supplements when you can get natural and long-lasting results with the Fat Burning Kitchen book.
+        </p>
+        <img src="imgs/Fat-Burning-Kitchen-Review-1-1.png" alt="fat burning kitchen" class="img">
+    </div>
+    <!-- ABOUT -->
+    <div class="about" id="about">
+        <h1 class="header">About Fat Burning Kitchen</h1>
+        <p class="content">
+            In this Fat Burning Kitchen review, you'll discover the different chapters of the program that provide a detailed overview of how to burn fat naturally. You'll learn which foods to eat and which to avoid, including daily staples like soy, wheat, and corn, as well as fat-free foods and diet soda. The program also highlights the dangers of high fructose corn syrup and explains why it's important to choose healthy fats over unhealthy ones like vegetable oils and margarine.
+        </p>
+        <p class="content">
+            One of the most unique aspects of the Fat Burning Kitchen is its focus on pasteurized dairy and non-organic animal products. By avoiding these foods, you can reduce your exposure to antibiotics, hormones, and other harmful substances that can negatively impact your health. Plus, the program provides a list of energy-boosting foods that can help you feel your best and achieve your weight loss goals.
+        </p>
+        <p class="content">
+            Most of the fat is hidden in HFCS compared to sugar components<a href="#first">(1).</a> The side effects of sugar are outlined here, which introduces the worst fat and explains its side effects. Then advises to choose and avoid bad fats. Such as vegetable oils, margarine, Tran's fat, etc.
+        </p>
+        <p class="content">
+            This programmer has the main attractions because the truth behind the pasteurized dairy is explained here in the Fat Burning Kitchen review. Non-Veg material where animals are kept frightening and used with antibiotics and hormones loaded<a href="#second">(2)</a> on them and the same substances are transferred to our foods.
+        </p>
+        <p class="content">
+            You can repair your damaged digestive system<a href="#third">(3).</a>
+        </p>
+    </div>
+    <!-- PROS & CONS -->
+    <div class="pros_cons" id="pros_cons">
+        <h1 class="header">Pros and Cons of Fat Burning Kitchen</h1>
+        <div class="pros_cons_divide">
+            <div class="half">
+                <h3 class="sub_header">Pros</h3>
+                <p class="content">
+                    The Fat Burning Kitchen is a unique and effective weight loss program that can improve your overall health and wellness.
+                </p>
+                <p class="content">
+                    By following the program, you can reduce your risk of health problems related to obesity, including sleepiness, irritability, fatigue, and pain.
+                </p>
+                <p class="content">
+                    The program has been scientifically tested and proven to be safe and effective, with no side effects.
+                </p>
+                <p class="content">
+                    With the 24-hour diet plan, you can learn how to control your food cravings and protect yourself from both poor nutrition and obesity.
+                </p>
+                <p class="content">
+                    If you're not satisfied with the program for any reason, you can get a full refund within 60 days.
+                </p>
+                <p class="content">
+                    The instructions provided are easy to follow and highly effective.
+                </p>
+                <p class="content">
+                    The customer support team is available 24/7 to answer any questions or concerns you may have.
+                </p>
+            </div>
+            <div class="divide"></div>
+            <div class="half">
+                <h3 class="sub_header">Cons</h3>
+                <p class="content">
+                    The Fat Burning Kitchen is only available for purchase online through the official website.
+                </p>
+                <p class="content">
+                    The program requires a significant change in your diet and lifestyle, which may be challenging for some.
+                </p>
+                <p class="content">
+                    The scientific concepts behind the program may be difficult for some people to understand.
+                </p>
+            </div>
+        </div>
+        <img src="imgs/the-Fat-Burning-Kitchen-free-1024x463-2-768x347.png" alt="before and after" class="img">
+    </div>
+    <!-- ADVANTAGES -->
+    <div class="advantages" id="advantages">
+        <h1 class="header">Advantages of Fat Burning Kitchen</h1>
+        <p class="content">
+            There are many advantages to the Fat Burning Kitchen book different from others.
+        </p>
+        <p class="content">
+            If you follow it then you can get rid of obesity quickly in 23 days
+        </p>
+        <p class="content">
+            There is a list of healthy and unhealthy foods by which you can easily understand what you should eat and which you should avoid.
+        </p>
+        <p class="content">
+            You can get it quickly through the official website; if not satisfied, then you can soon get your money back.
+        </p>
+        <p class="content">
+            From Fat Burning Kitchen review, you can know the real truth of the foods that claim to be beneficial for you.
+        </p>
+        <p class="content">
+            Fat Burning Kitchen Pdf is also available for online viewers.
+        </p>
+    </div>
+    <!-- AUTHOR -->
+    <div class="author" id="author">
+        <h1 class="header">
+            Fat Burning Kitchen <span style="border-bottom:5px solid #A5A5A5;">Author</span>
+        </h1>
+        <p class="content">
+            The Fat Burning Kitchen free book is discovered and published by Catherine Ebeling and Mike Geary. These two people are incredibly interested in eating healthy food, and as soon they found that some foods are listed as healthy but how harmful they really are.
+        </p>
+        <p class="content">
+            And then, they compiled this information through in the book of 23 chapters in which they have listed all aspects of dieting plans and foods. There is a list of food that is harmful to the body. It shows how some substances used in daily life are unhealthy for you that can create a lump of disease.
+        </p>
+        <p class="content">
+            They demonstrate the food products to the people which food he keeps for his own use. Mike Geary has stated in his mentioned words that he will never become a bodybuilder fitness model. He said that he is a regular man who can get his fat really fast if he eats like an American.
+        </p>
+        <p class="content">
+            They believe that food should be less rather than more but beneficial. He said that full-fat foods like coconut milk or oil, butter, nuts, meat avocado, milk, etc. should be consumed. Truthaboutabs.com is also authorized by Mike Geary. Mike has published many fitness articles on fitness websites. He believes that he does not falsely claim fitness.
+        </p>
+        <div class="yt_player">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/mDHGaU_jGrQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+    <!-- REVIEWS -->
+    <div class="reviews" id="reviews">
+        <h1 class="header">Fat Burning Kitchen <span style="border-bottom:5px solid #FFD911;">Reviews</span></h1>
+        <h3 class="sub_header">Here are some reviews from customers who have used the Fat Burning Kitchen book:</h3>
+        <div class="review review_l" id="review512">
+            <div class="avatar">
+                <img src="imgs/sarah.jpeg" alt="sarah" class="img">
+            </div>
+            <p class="content">
+                "I have been struggling with my weight for years, and nothing seemed to work for me. But after following the Fat Burning Kitchen book for 23 days, I have lost 10 pounds! The book was easy to understand, and the recipes were delicious. I highly recommend it to anyone who wants to lose weight in a healthy way."
+            </p>
+            <p class="sign">- Sarah H.</p>
+        </div>
+        <div class="review review_r" id="review512">
+            <div class="avatar">
+                <img src="imgs/john.jpeg" alt="john" class="img">
+            </div>
+            <p class="content">
+                "I was skeptical about trying another weight loss program, but I decided to give the Fat Burning Kitchen a chance. I'm so glad I did! The book has changed my life. I feel healthier and more energized, and I have lost 15 pounds in just a few weeks. I recommend this book to anyone who wants to live a healthier life."
+            </p>
+            <p class="sign">- John M.</p>
+        </div>
+        <div class="review review_l" id="review512">
+            <div class="avatar">
+                <img src="imgs/lisa.jpg" alt="lisa" class="img">
+            </div>
+            <p class="content">
+                "I have tried many diets and supplements in the past, but none of them worked for me. But the Fat Burning Kitchen book is different. It's not just a diet plan; it's a lifestyle change. The book is easy to follow, and the recipes are delicious. I have lost 20 pounds in just a few weeks, and I feel great. I highly recommend this book to anyone who wants to lose weight in a healthy way."
+            </p>
+            <p class="sign">- Lisa T.</p>
+        </div>
+        <div class="review review_r" id="review512">
+            <div class="avatar">
+                <img src="imgs/mark.jpg" alt="mark" class="img">
+            </div>
+            <p class="content">
+                "I have always been skeptical about weight loss programs, but the Fat Burning Kitchen book changed my mind. The book is informative and easy to understand, and the recipes are delicious. I have lost 5 pounds in just a few days, and I feel more energized than ever. I recommend this book to anyone who wants to lose weight in a healthy and natural way."
+            </p>
+            <p class="sign">- Mark R.</p>
+        </div>
+        <div class="review review_l" id="review512">
+            <div class="avatar">
+                <img src="imgs/amy.jpeg" alt="amy" class="img">
+            </div>
+            <p class="content">
+                "I have been struggling with my weight for years, and I have tried everything to lose it. But nothing seemed to work for me until I found the Fat Burning Kitchen book. The book is amazing! It's easy to follow, and the recipes are delicious. I have lost 10 pounds in just a few weeks, and I feel more confident than ever. I highly recommend this book to anyone who wants to lose weight in a healthy way."
+            </p>
+            <p class="sign">- Amy G.</p>
+        </div>
+        <p class="content">
+            These are just a few of the many positive reviews that the Fat Burning Kitchen book has received. If you want to lose weight in a healthy and natural way, then this book is definitely worth checking out.
+        </p>
+    </div>
+    <!-- BONUS -->
+    <div class="bonus" id="bonus">
+        <h1 class="header">
+            Discover the <span style="color:#FF9C28;">Secret</span> to Rapid <span style="color:#3192EB;">Fat Loss</span> with <span style="border-bottom:5px solid #11C6FF;">Fat Burning Kitchen</span> Bonuses
+        </h1>
+        <h3 class="sub_header">
+            Unlock the 23-Day Advanced Nutritional Fat Burning Blueprint <span style="border-bottom:8px solid #00FF38;">for Free!</span>
+        </h3>
+        <p class="content">
+            Are you tired of struggling with stubborn belly fat and failing to lose weight? Look no further than the Fat Burning Kitchen book and its amazing bonuses! With the 23-day advanced nutritional fat burning blueprint, you can lose up to 3.3% body fat in just 23 days. And the best part? You can get this bonus for free!
+        </p>
+        <p class="content">
+            Inside the blueprint, you'll discover advanced fat-burning tactics that will help you reduce stubborn stomach fat, along with exact meal plans, nutrient ratios, timing schedules, and more. Plus, you'll learn secret rapid tricks and tactics, including spices, foods, teas, and nutrients that will help prepare your body to burn off fat. And the blueprint even helps you preserve your hard-earned lean muscles!
+        </p>
+        <p class="content">
+            But hurry - this special free bonus is worth $34.95 and is only available for a limited time. So, what are you waiting for? Click the link below to purchase the Fat Burning Kitchen book and get your free 23-day advanced nutritional fat burning blueprint now!
+        </p>
+        <img src="imgs/fatburningkitchn.jpeg" alt="fat burning kitchen book" class="img">
+        <div class="purchase_container">
+            <a href="https://ssl.clickbank.net/order/orderform.html?time=1681457988&vvvv=6d696b65676561727931&vtid=novideoint3&cbskin=22995&cbfid=27321&cbf=S8LDUZDWVG&cbitems=98&vvar=cbitems%3D98%26vtid%3Dnovideoint3%26cbskin%3D22995%26cbfid%3D27321%26__user_id%3D59d60bcc445ba3f89f4f5c8277ba2df7%26__page_id%3D240%26__page_version%3D%26__hostname%3Dtruthaboutabs.com&corid=8940f12b-8f53-4585-aeec-a5490ae77523" target="_blank" class="purchase">>>  download ebook + bonuses</a>
+        </div>
+    </div>
+    <!-- CONCLUSION -->
+    <div class="conclusion" id="conclusion">
+        <h1 class="header">
+            Conclusion - Fat Burning Kitchen Review
+        </h1>
+        <p class="content">
+            If you're tired of false claims and fake products that don't deliver results, then the Fat Burning Kitchen book is the solution you've been looking for. With its proven methods, thousands of people around the world have achieved impressive weight loss results.
+        </p>
+        <p class="content">
+            This book is not about starving yourself or following a fad diet. Instead, it teaches you what foods to eat and what to avoid, so you can make healthy, sustainable changes to your diet. And with the Fat Burning Kitchen recipes, you'll never be at a loss for delicious, healthy meal ideas.
+        </p>
+        <p class="content">
+            So, if you're ready to change your diet and transform your body, the Fat Burning Kitchen book is the perfect place to start. And if you're not satisfied with your results, you can always take advantage of the money-back guarantee.
+        </p>
+    </div>
+    <!-- FAQ -->
+    <div class="faq" id="faq">
+        <h1 class="header">Frequently Asked Questions</h1>
+        <div class="q">
+            <input id="faq1" type="checkbox" class="panel">
+            <label for="faq1" class="sub_header">What is Fat Burning Kitchen?</label>
+            <p class="plus">+</p>
+            <div class="faq_inner">
+                <p class="content">A program mentions showing you diet products with 24 hours diet. It tells you about food-related nutrition.</p>
+            </div>
+        </div>
+        <div class="q">
+            <input id="faq2" type="checkbox" class="panel">
+            <label for="faq2" class="sub_header">Fat Burning Kitchen Price?</label>
+            <p class="plus">+</p>
+            <div class="faq_inner">
+                <p class="content">The price of the product is $40, which is easy and reasonable to buy for everyone.</p>
+            </div>
+        </div>
+        <div class="q">
+            <input id="faq3" type="checkbox" class="panel">
+            <label for="faq3" class="sub_header">Any Side Effects For Fat Burning Kitchen?</label>
+            <p class="plus">+</p>
+            <div class="faq_inner">
+                <p class="content">It is hugely tested, don't worry about any side effects.</p>
+            </div>
+        </div>
+        <div class="q">
+            <input id="faq4" type="checkbox" class="panel">
+            <label for="faq4" class="sub_header">How Can I Get That Fat Burning Kitchen?</label>
+            <p class="plus">+</p>
+            <div class="faq_inner">
+                <p class="content">Fat Burning Kitchen can be purchased from its official website only.</p>
+            </div>
+        </div>
+    </div>
+    <!-- REFERENCES -->
+    <div class="ref" id="ref">
+        <h1 class="header">References</h1>
+        <p class="content" id="first">
+            University of California San Francisco. (n.d). Added sugar is hiding in 74% of packaged foods. Available [online] at: <a href="https://sugarscience.ucsf.edu/hidden-in-plain-sight/#.XlzWBSEzbIV">https://sugarscience.ucsf.edu/hidden-in-plain-sight/#.XlzWBSEzbIV</a>
+        </p>
+        <p class="content" id="second">
+            National Center for Biotechnology Information. (n.d). Risk Assessment of Growth Hormones and Antimicrobial Residues in Meat. Available [online] at: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3834504/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3834504/</a>
+        </p>
+        <p class="content" id="third">
+            BMJ Publishing Group Ltd & British Society of Gastroenterology. (n.d). Zinc carnosine, a health food supplement that stabilizes small bowel integrity and stimulates gut repair processes. Available [online] at: <a href="https://gut.bmj.com/content/56/2/168.short">https://gut.bmj.com/content/56/2/168.short</a>
+        </p>
+    </div>
+</div>
+<!-- FIXED BUTTONS -->
+<div class="fixed">
+    <div class="links">
+        <a href="https://www.instagram.com/fat.burning.recipes/" target="_blank"><div class="ig"><i class="fa-brands fa-instagram"></i></div></a>
+        <a href="https://www.instagram.com/calories.good/" target="_blank"><div class="ig"><i class="fa-brands fa-instagram"></i></div></a>
+    </div>
+    <div class="up" onclick="scrollToTop()"><i class="fa-solid fa-caret-up"></i></div>
+</div>

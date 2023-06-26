@@ -38,7 +38,8 @@ def patientclick_view(request):
         return HttpResponseRedirect('afterlogin')
     return render(request,'hospital/patientclick.html')
 
-
+def helth(request):
+    return render(request,"hospital/helth.html")
 
 
 def admin_signup_view(request):
