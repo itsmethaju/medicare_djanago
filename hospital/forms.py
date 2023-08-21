@@ -70,3 +70,11 @@ class ContactusForm(forms.Form):
     Message = forms.CharField(max_length=500,widget=forms.Textarea(attrs={'rows': 3, 'cols': 30}))
 
 
+from django import forms
+from .models import OnlineAppointment
+
+class OnlineAppointmentForm(forms.ModelForm):
+    doctorId=forms.ModelChoiceField(queryset=models.Doctor.objects.all().filter(status=True),empty_label="Doctor Name and Department", to_field_name="user_id")
+    class Meta:
+        model=models.OnlineAppointment
+        fields=['description','status']

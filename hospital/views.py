@@ -653,15 +653,30 @@ def doctor_appointment_view(request):
 
 @login_required(login_url='doctorlogin')
 @user_passes_test(is_doctor)
+
 def doctor_view_appointment_view(request):
-    doctor=models.Doctor.objects.get(user_id=request.user.id) #for profile picture of doctor in sidebar
-    appointments=models.Appointment.objects.all().filter(status=True,doctorId=request.user.id)
-    patientid=[]
-    for a in appointments:
-        patientid.append(a.patientId)
-    patients=models.Patient.objects.all().filter(status=True,user_id__in=patientid)
-    appointments=zip(appointments,patients)
-    return render(request,'hospital/doctor_view_appointment.html',{'appointments':appointments,'doctor':doctor})
+    doctor = models.Doctor.objects.get(user_id=request.user.id)  # For profile picture of doctor in sidebar
+
+    appointments = models.Appointment.objects.filter(status=True, doctorId=request.user.id)
+    patient_ids = [appointment.patientId for appointment in appointments]
+    
+    patients = models.Patient.objects.filter(status=True, user_id__in=patient_ids)
+    
+    appointment_data = zip(appointments, patients)
+
+    online_appointments = models.OnlineAppointment.objects.filter(status=True, doctorId=request.user.id)
+    online_patient_ids = [online_appointment.patientId for online_appointment in online_appointments]
+    
+    online_patients = models.Patient.objects.filter(status=True, user_id__in=online_patient_ids)
+    
+    online_appointment_data = zip(online_appointments, online_patients)
+    
+    return render(request, 'hospital/doctor_view_appointment.html', {
+        'appointment_data': appointment_data,
+        'doctor': doctor,
+        'online_appointment_data': online_appointment_data
+    })
+
 
 
 
@@ -783,7 +798,9 @@ def search_doctor_view(request):
 def patient_view_appointment_view(request):
     patient=models.Patient.objects.get(user_id=request.user.id) #for profile picture of patient in sidebar
     appointments=models.Appointment.objects.all().filter(patientId=request.user.id)
-    return render(request,'hospital/patient_view_appointment.html',{'appointments':appointments,'patient':patient})
+    OnlineAppointment=models.OnlineAppointment.objects.all().filter(patientId=request.user.id)
+
+    return render(request,'hospital/patient_view_appointment.html',{'appointments':appointments,'patient':patient,"OnlineAppointment":OnlineAppointment})
 
 
 
@@ -849,3 +866,37 @@ def contactus_view(request):
             send_mail(str(name)+' || '+str(email),message,settings.EMAIL_HOST_USER, settings.EMAIL_RECEIVING_USER, fail_silently = False)
             return render(request, 'hospital/contactussuccess.html')
     return render(request, 'hospital/contactus.html', {'form':sub})
+
+
+
+
+
+
+from django.shortcuts import render, redirect
+from django.http import HttpResponseRedirect
+from .models import OnlineAppointment
+from .forms import OnlineAppointmentForm
+
+def create_appointment(request):
+    appointmentForm=forms.OnlineAppointmentForm()
+    patient=models.Patient.objects.get(user_id=request.user.id) #for profile picture of patient in sidebar
+    message=None
+    mydict={'appointmentForm':appointmentForm,'patient':patient,'message':message}
+    if request.method=='POST':
+        appointmentForm=forms.OnlineAppointmentForm(request.POST)
+        if appointmentForm.is_valid():
+            print(request.POST.get('doctorId'))
+            desc=request.POST.get('description')
+
+            doctor=models.Doctor.objects.get(user_id=request.POST.get('doctorId'))
+            
+            appointment=appointmentForm.save(commit=False)
+            appointment.doctorId=request.POST.get('doctorId')
+            appointment.patientId=request.user.id #----user can choose any patient but only their info will be stored
+            appointment.doctorName=models.User.objects.get(id=request.POST.get('doctorId')).first_name
+            appointment.patientName=request.user.first_name #----user can choose any patient but only their info will be stored
+            appointment.status=False
+            appointment.save()
+        return HttpResponseRedirect('/patient-dashboard')
+    return render(request, 'hospital/appointment_form.html', context=mydict)
+
